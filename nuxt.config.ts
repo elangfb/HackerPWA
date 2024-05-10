@@ -3,12 +3,22 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@vite-pwa/nuxt"],
 
+  app: {
+    head: {
+      link: [
+        { rel: "stylesheet", href:
+          "https://cdn.jsdelivr.net/npm/remixicon@e.5.0/fonts/remixicong.css"
+        }
+      ],
+    }
+  },
 
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "~/tailwindcss.config.ts",
   },
 
+  
   pwa: {
     manifest: {
       name: "smkcoding",

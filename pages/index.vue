@@ -1,3 +1,19 @@
+<script lang="ts" setup>
+import { products } from '~/composables/constants/products';
+
+const allProduct = ref(products);
+</script>
+
 <template>
-    <h1>Ini Halaman Home</h1>
+    <section>
+        <div class="container">
+            <div class="py-10">
+                <div class="flex gap-6 flex-wrap mx-auto">
+                    <template v-for="(item, index) in allProduct" :key="index">
+                    <CardsCardProduct :products="item" class="w-[calc(100%/4-18px)]"/>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
