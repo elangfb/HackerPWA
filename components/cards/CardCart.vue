@@ -21,7 +21,7 @@ const props = defineProps({
                     <div class="py-1 px-2 text-lg flex items-center justify-center">1</div>
                     <button class="cursor-pointer py-1 pl-2 pr-4 text-lg flex items-center justify-center">+</button>
                 </div>
-                <div class="flex items-center gap-2 border border-gray-300 px-3 py-2 rounded-full cursor-pointer" @click="$emit('removeCart', props.product.id)">
+                <div class="flex items-center gap-2 border border-gray-300 px-3 py-2 rounded-full cursor-pointer hover:bg-blue-900" @click="$emit('removeCart', props.product.id)">
                     <i class="ri-delete-bin-7-fill text-sm text-gray-600"></i>
                     <span class="text-sm text-gray-500">Delete</span>
                 </div>
